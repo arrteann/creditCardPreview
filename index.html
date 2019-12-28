@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check Card</title>
+    <!-- FONT  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <!-- CONTAINER START HERE -->
+    <div class="container">
+        <!-- TITLE -->
+        <h1 class="title">CARD STYLE</h1>
+        <!-- CARD START HERE -->
+        <div class="card">
+            <div class="top__card">
+                <span class="text name-label">
+                    Name
+                </span>
+                <span class="text cvv2-label">
+                    CVV2 : <span>0000</span>
+                </span>
+            </div>
+            <div class="center__card">
+                <span class="text text-num card_number-label">XXXX</span>
+                <span class="text text-num card_number-label">XXXX</span>
+                <span class="text text-num card_number-label">XXXX</span>
+                <span class="text text-num card_number-label">XXXX</span>
+            </div>
+            <div class="bottom__card">
+                <span class="text expire_date">
+                    <span class="text year-label">00</span>
+                    /
+                    <span class="text month-label">00</span>
+                </span>
+            </div>
+        </div>
+        <!-- CARD END HERE -->
+        <br><br>
+        <!-- TITLE -->
+        <h1 class="title">DATA FORM</h1>
+        <!-- FORM START HERE -->
+        <div class="form">
+            <input type="text" class="name inputstyle"
+                onKeyPress="if(this.value.length == 15){document.querySelector('.cvv2').focus();;return false;}"
+                placeholder="Enter Your Name"><br>
+
+            <input type="number"
+                onKeyPress="if(this.value.length==4) {document.querySelector('.nb1').focus();return false;}"
+                class="cvv2 inputstyle" placeholder="Enter CCV2"><br>
+
+            <input type="number"
+                onKeyPress="if(this.value.length==4) {document.querySelector('.nb2').focus();return false;}"
+                class="card_number inputstyle nb1 nbstyle" placeholder="0000">
+
+            <input type="number"
+                onKeyPress="if(this.value.length==4) {document.querySelector('.nb3').focus();return false;}"
+                class="card_number inputstyle nb2 nbstyle" placeholder="0000">
+            <input type="number"
+                onKeyPress="if(this.value.length==4) {document.querySelector('.nb4').focus();return false;}"
+                class="card_number inputstyle nb3 nbstyle" placeholder="0000">
+
+            <input type="number"
+                onKeyPress="if(this.value.length==4) {document.querySelector('.month').focus();return false;}"
+                class="card_number inputstyle nb4 nbstyle" placeholder="0000"><br>
+
+            <input type="number"
+                onKeyPress="if(this.value.length==2) {document.querySelector('.year').focus();return false;}"
+                class="month inputstyle expstyle" placeholder="Enter EXPIRE MONTH">
+
+            <input type="number" onKeyPress="if(this.value.length==2) return false" class="year inputstyle expstyle"
+                placeholder="Enter EXPIRE YEAR"><br>
+
+            <input type="text" class="color inputstyle" placeholder="Enter HEX COLOR CODE" value="#666666"><br>
+        </div>
+        <!-- FORM END HERE -->
+    </div>
+    <!-- CONTAINER END HERE -->
+
+    <!-- Script -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
